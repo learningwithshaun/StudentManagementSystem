@@ -4,6 +4,23 @@ package za.ac.cput;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Student s = new UndergraduateStudent.Builder("222428600", "Amanda Msutu")
+                   .email("222428600@mycput.ac.za")
+                   .department("Engineering")
+                   .creditHours(250)
+                   .scholarshipAmount(2000000)
+                   .build();
+        s.displayStudentDetails();
 
+        System.out.println();
+
+        GraduateStudent g = new GraduateStudent.Builder("230070728", "Isaac Ntuli")
+                            .email("230070728@mycput.ac.za")
+                            .department("Engineering")
+                            .researchAssistant(true)
+                            .stipend(0.00)
+                            .build();
+
+        g.displayStudentDetails();
     }
 }

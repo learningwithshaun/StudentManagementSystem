@@ -1,10 +1,14 @@
 package za.ac.cput;
 
-public class GraduateStudent extends Student{
+import java.util.StringJoiner;
+
+public class GraduateStudent extends Student {
     private final boolean researchAssistant;
     private final double stipend;
 
-    public GraduateStudent(Builder builder){
+    public GraduateStudent(Builder builder) {
+        this.studentId = builder.studentId;
+        this.name = builder.name;
         this.researchAssistant = builder.researchAssistant;
         this.stipend = builder.stipend;
     }
@@ -21,11 +25,28 @@ public class GraduateStudent extends Student{
 
     @Override
     public void displayStudentDetails() {
+        StringJoiner joiner = new StringJoiner("\n", "Student ", ".");
 
+        joiner.add("ID:" + studentId);
+        joiner.add("Name: " + name);
+
+        if (email != null) {
+            joiner.add("Email: " + email);
+        }
+        if (department != null) {
+            joiner.add("Department: " + department);
+        }
+        if (researchAssistant != false) {
+            joiner.add("Reaserch Assistant: " + researchAssistant);
+        }
+        if (stipend > 0) {
+            joiner.add("Stipend: " + stipend);
+        }
+        System.out.println(joiner.toString());
     }
 
-    public static class Builder{
-        private final int studentId;
+    public static class Builder {
+        private final String studentId;
         private final String name;
 
         private String email;
@@ -33,27 +54,31 @@ public class GraduateStudent extends Student{
         private boolean researchAssistant;
         private double stipend;
 
-        public Builder(int studentId, String name) {
+        public Builder(String studentId, String name) {
             this.studentId = studentId;
             this.name = name;
         }
 
-        public Builder email(String email){
+        public Builder email(String email) {
             this.email = email;
             return this;
         }
 
-        public Builder department(String department){
+        public Builder department(String department) {
             this.department = department;
             return this;
         }
 
-        public Builder researchAssistant(boolean researchAssistant){
+        public Builder researchAssistant(boolean researchAssistant) {
             this.researchAssistant = researchAssistant;
             return this;
         }
+        public Builder stipend(double stipend){
+            this.stipend = stipend;
+            return this;
+        }
 
-        public GraduateStudent build(){
+        public GraduateStudent build() {
             return new GraduateStudent(this);
         }
     }
