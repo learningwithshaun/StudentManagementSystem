@@ -7,15 +7,15 @@ public class Main {
         Student s = new UndergraduateStudent.Builder("222428600", "Amanda Msutu")
                 .email("222428600@mycput.ac.za")
                 .department("Engineering")
-                .creditHours(250)
-                .scholarshipAmount(2000000)
+                .creditHours(300)
+                .scholarshipAmount(200000)
                 .build();
 
         Student g = new GraduateStudent.Builder("230070728", "Isaac Ntuli")
                 .email("230070728@mycput.ac.za")
                 .department("Engineering")
                 .researchAssistant(true)
-                .stipend(100000.00)
+                .stipend(10000.00)
                 .build();
 
         s.displayStudentDetails();

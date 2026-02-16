@@ -18,11 +18,12 @@ public class UndergraduateStudent extends Student {
 
     @Override
     public double calculateTuition() {
-        return 0;
+        return creditHours * 2000 - scholarshipAmount;
     }
 
     @Override
     public String getStudentType() {
+
         return "Undergraduate Student";
     }
 
@@ -47,6 +48,7 @@ public class UndergraduateStudent extends Student {
         if (scholarshipAmount > 0) {
             joiner.add("Scholarship Amount: " + scholarshipAmount);
         }
+        joiner.add("Total tuition fee: R" +calculateTuition());
         System.out.println(joiner.toString());
     }
 

@@ -17,11 +17,13 @@ public class GraduateStudent extends Student {
 
     @Override
     public double calculateTuition() {
-        return 0;
+        double tuition = 55000;
+        return tuition - stipend;
     }
 
     @Override
     public String getStudentType() {
+
         return "Graduate Student";
     }
 
@@ -45,6 +47,7 @@ public class GraduateStudent extends Student {
         if (stipend > 0) {
             joiner.add("Stipend: " + stipend);
         }
+        joiner.add("Total tuition fee: R" +calculateTuition());
         System.out.println(joiner.toString());
     }
 
