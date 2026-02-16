@@ -15,7 +15,7 @@ public class Main {
                 .email("230070728@mycput.ac.za")
                 .department("Engineering")
                 .researchAssistant(true)
-                .stipend(0.00)
+                .stipend(100000.00)
                 .build();
 
         s.displayStudentDetails();

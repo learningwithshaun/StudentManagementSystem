@@ -31,6 +31,7 @@ public class UndergraduateStudent extends Student {
 
         StringJoiner joiner = new StringJoiner("\n", "Student ", ".");
 
+        joiner.add("Type: " + getStudentType());
         joiner.add("ID:" + studentId);
         joiner.add("Name: " + name);
 

@@ -29,6 +29,7 @@ public class GraduateStudent extends Student {
     public void displayStudentDetails() {
         StringJoiner joiner = new StringJoiner("\n", "Student ", ".");
 
+        joiner.add("Type: " + getStudentType());
         joiner.add("ID:" + studentId);
         joiner.add("Name: " + name);
 
@@ -39,7 +40,7 @@ public class GraduateStudent extends Student {
             joiner.add("Department: " + department);
         }
         if (researchAssistant != false) {
-            joiner.add("Reaserch Assistant: " + researchAssistant);
+            joiner.add("Research Assistant: " + researchAssistant);
         }
         if (stipend > 0) {
             joiner.add("Stipend: " + stipend);
