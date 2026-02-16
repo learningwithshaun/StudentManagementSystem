@@ -1,6 +1,5 @@
 package za.ac.cput;
 
-import javax.swing.*;
 import java.util.StringJoiner;
 
 public class UndergraduateStudent extends Student {
@@ -33,7 +32,7 @@ public class UndergraduateStudent extends Student {
         StringJoiner joiner = new StringJoiner("\n", "Student ", ".");
 
         joiner.add("Type: " + getStudentType());
-        joiner.add("ID:" + studentId);
+        joiner.add("ID: " + studentId);
         joiner.add("Name: " + name);
 
         if (email != null) {
