@@ -23,7 +23,7 @@ public class UndergraduateStudent extends Student {
 
     @Override
     public String getStudentType() {
-        return "";
+        return "Undergraduate Student";
     }
 
     @Override

@@ -9,6 +9,8 @@ public class GraduateStudent extends Student {
     public GraduateStudent(Builder builder) {
         this.studentId = builder.studentId;
         this.name = builder.name;
+        this.email = builder.email;
+        this.department = builder.department;
         this.researchAssistant = builder.researchAssistant;
         this.stipend = builder.stipend;
     }
@@ -20,7 +22,7 @@ public class GraduateStudent extends Student {
 
     @Override
     public String getStudentType() {
-        return "";
+        return "Graduate Student";
     }
 
     @Override
