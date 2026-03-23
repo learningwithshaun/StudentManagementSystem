@@ -4,7 +4,7 @@ package za.ac.cput;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Student s = new UndergraduateStudent.Builder("222428600", "Amanda Msutu")
+        Student s = new UndergraduateStudent.Builder()
                 .email("222428600@mycput.ac.za")
                 .department("Engineering")
                 .creditHours(300)

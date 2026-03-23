@@ -60,7 +60,7 @@ public class UndergraduateStudent extends Student {
         private int creditHours;
         private double scholarshipAmount;
 
-        public Builder(String studentId, String name) {
+        public Builder() {
             this.studentId = studentId;
             this.name = name;
         }
