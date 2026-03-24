@@ -21,5 +21,6 @@ public class Main {
         s.displayStudentDetails();
         System.out.println();
         g.displayStudentDetails();
+        System.out.println("heyyyyy!");
     }
 }
